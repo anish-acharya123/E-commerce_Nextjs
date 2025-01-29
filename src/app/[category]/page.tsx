@@ -10,9 +10,14 @@ export default async function Category({
   params: Promise<{ category: string }>;
 }) {
   const { category } = await params;
-  const categoryFood = foodData.filter(
-    (item) => item.category.toLowerCase() == category.toLowerCase()
-  );
+  let categoryFood;
+  if (category.toLowerCase() !== "allfoods") {
+    categoryFood = foodData.filter(
+      (item) => item.category.toLowerCase() == category.toLowerCase()
+    );
+  } else {
+    categoryFood = foodData;
+  }
   return (
     <section className="py-10">
       <Wrapper>

@@ -4,7 +4,7 @@ import StarRating from "../ui/Startrating";
 import GridComponent from "../layouts/ReusedComponent";
 // import { Icon } from "@iconify/react/dist/iconify.js";
 
-type EachdataProps = {
+export type EachdataProps = {
   id: number;
   title: string;
   desc: string;
@@ -21,7 +21,7 @@ export default function EachItem({ data }: { data: EachdataProps[] }) {
     <GridComponent>
       {data.map((item) => (
         <Link
-          href={`/${item.category}/food${item.id}`}
+          href={`/${item.category}/${item.id}`}
           key={item.id}
           className="space-y-2  hover:bg-gray-100 transition-colors duration-500 rounded-bl-md rounded-br-md "
         >

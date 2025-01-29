@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Chocolate Cake",
-    "desc": "Delicious and rich chocolate cake",
+    "desc": "Delicious and rich chocolate cake that melts in your mouth. Perfect for any chocolate lover, this cake is a true indulgence. Enjoy it with a scoop of vanilla ice cream for an extra treat.",
     "available_count": 20,
     "image": "/data/chocolatecake.png",
     "category": "dessert",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "title": "Veggie Pizza",
-    "desc": "Healthy and tasty veggie pizza",
+    "desc": "Healthy and tasty veggie pizza loaded with fresh vegetables. A perfect choice for a nutritious and delicious meal. Enjoy the crispy crust and flavorful toppings.",
     "available_count": 15,
     "image": "/data/pizza.png",
     "category": "dinner",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "title": "Lemonade",
-    "desc": "Refreshing lemonade drink",
+    "desc": "Refreshing lemonade drink that quenches your thirst. Made with fresh lemons, it's the perfect beverage for a hot day. Enjoy the tangy and sweet flavor.",
     "available_count": 50,
     "image": "/data/Lemonade.png",
     "category": "drinks",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "title": "Nachos",
-    "desc": "Crispy and cheesy nachos",
+    "desc": "Crispy and cheesy nachos that are perfect for snacking. Loaded with melted cheese and your favorite toppings. Enjoy them with a side of salsa or guacamole.",
     "available_count": 30,
     "image": "/data/Nachos.png",
     "category": "snacks",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "title": "Special Sushi",
-    "desc": "Exclusive and delicious sushi",
+    "desc": "Exclusive and delicious sushi made with the freshest ingredients. A true delicacy for sushi lovers. Enjoy the perfect balance of flavors and textures.",
     "available_count": 10,
     "image": "/data/Sushi.png",
     "category": "specialfood",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "title": "Apple Pie",
-    "desc": "Classic apple pie with a flaky crust",
+    "desc": "Classic apple pie with a flaky crust and sweet apple filling. A timeless dessert that everyone loves. Enjoy it warm with a scoop of vanilla ice cream.",
     "available_count": 25,
     "image": "/data/Apple_Pie.png",
     "category": "dessert",
@@ -68,7 +68,7 @@
   {
     "id": 7,
     "title": "Chicken Burger",
-    "desc": "Juicy chicken burger with fresh lettuce",
+    "desc": "Juicy chicken burger with fresh lettuce and a soft bun. A perfect meal for any time of the day. Enjoy the delicious flavors and satisfying texture.",
     "available_count": 18,
     "image": "/data/Chicken_Burger.png",
     "category": "dinner",
@@ -79,7 +79,7 @@
   {
     "id": 8,
     "title": "Iced Coffee",
-    "desc": "Chilled coffee with a hint of vanilla",
+    "desc": "Chilled coffee with a hint of vanilla, perfect for a refreshing pick-me-up. Enjoy the smooth and rich flavor. A great way to cool down and energize.",
     "available_count": 40,
     "image": "/data/Iced_Coffee.png",
     "category": "drinks",
@@ -90,7 +90,7 @@
   {
     "id": 9,
     "title": "French Fries",
-    "desc": "Crispy and golden french fries",
+    "desc": "Crispy and golden french fries that are perfect for snacking. Enjoy them with your favorite dipping sauce. A classic side dish that never disappoints.",
     "available_count": 35,
     "image": "/data/French_Fries.png",
     "category": "snacks",
@@ -101,7 +101,7 @@
   {
     "id": 10,
     "title": "Special Ramen",
-    "desc": "Flavorful ramen with special ingredients",
+    "desc": "Flavorful ramen with special ingredients that make it unique. A perfect meal for any ramen lover. Enjoy the rich broth and tender noodles.",
     "available_count": 12,
     "image": "/data/Special_Ramen.png",
     "category": "specialfood",
@@ -112,7 +112,7 @@
   {
     "id": 11,
     "title": "Brownie",
-    "desc": "Rich and fudgy chocolate brownie",
+    "desc": "Rich and fudgy chocolate brownie that is perfect for dessert. Enjoy the decadent flavor and moist texture. A true treat for any chocolate lover.",
     "available_count": 22,
     "image": "/data/Brownie.png",
     "category": "dessert",
@@ -123,7 +123,7 @@
   {
     "id": 12,
     "title": "Margherita Pizza",
-    "desc": "Classic margherita pizza with fresh basil",
+    "desc": "Classic margherita pizza with fresh basil and mozzarella. A timeless favorite that everyone loves. Enjoy the simple yet delicious flavors.",
     "available_count": 20,
     "image": "/data/Margherita_Pizza.png",
     "category": "dinner",
@@ -134,7 +134,7 @@
   {
     "id": 13,
     "title": "Mango Smoothie",
-    "desc": "Refreshing mango smoothie",
+    "desc": "Refreshing mango smoothie made with fresh mangoes. A perfect drink for a hot day. Enjoy the sweet and tropical flavor.",
     "available_count": 45,
     "image": "/data/Mango_Smoothi.png",
     "category": "drinks",
@@ -145,7 +145,7 @@
   {
     "id": 14,
     "title": "Popcorn",
-    "desc": "Buttery and salty popcorn",
+    "desc": "Buttery and salty popcorn that is perfect for snacking. Enjoy the classic flavor and satisfying crunch. A great snack for movie nights.",
     "available_count": 50,
     "image": "/data/Popcorn.png",
     "category": "snacks",
@@ -156,7 +156,7 @@
   {
     "id": 15,
     "title": "Special Paella",
-    "desc": "Traditional Spanish paella with seafood",
+    "desc": "Traditional Spanish paella with seafood that is full of flavor. A perfect dish for a special occasion. Enjoy the rich and savory taste.",
     "available_count": 8,
     "image": "/data/Special_Paella.png",
     "category": "specialfood",
@@ -167,7 +167,7 @@
   {
     "id": 16,
     "title": "Cheesecake",
-    "desc": "Creamy and smooth cheesecake",
+    "desc": "Creamy and smooth cheesecake that is perfect for dessert. Enjoy the rich and tangy flavor. A classic treat that everyone loves.",
     "available_count": 20,
     "image": "/data/Cheesecake.png",
     "category": "dessert",
@@ -178,7 +178,7 @@
   {
     "id": 17,
     "title": "BBQ Chicken Wings",
-    "desc": "Spicy and tangy BBQ chicken wings",
+    "desc": "Spicy and tangy BBQ chicken wings that are perfect for a meal or snack. Enjoy the flavorful sauce and tender meat. A great choice for any occasion.",
     "available_count": 25,
     "image": "/data/BBQ_Chicken_Wings.png",
     "category": "dinner",
@@ -189,7 +189,7 @@
   {
     "id": 18,
     "title": "Green Tea",
-    "desc": "Healthy and refreshing green tea",
+    "desc": "Healthy and refreshing green tea that is perfect for any time of the day. Enjoy the light and soothing flavor. A great choice for a relaxing drink.",
     "available_count": 60,
     "image": "/data/Green_Tea.png",
     "category": "drinks",
@@ -200,7 +200,7 @@
   {
     "id": 19,
     "title": "Pretzels",
-    "desc": "Salty and crunchy pretzels",
+    "desc": "Salty and crunchy pretzels that are perfect for snacking. Enjoy the classic flavor and satisfying texture. A great choice for any time of the day.",
     "available_count": 40,
     "image": "/data/Pretzels.png",
     "category": "snacks",
@@ -211,7 +211,7 @@
   {
     "id": 20,
     "title": "Special Tacos",
-    "desc": "Mexican tacos with special fillings",
+    "desc": "Mexican tacos with special fillings that are full of flavor. A perfect meal for any taco lover. Enjoy the rich and savory taste.",
     "available_count": 10,
     "image": "/data/Special_Tacos.png",
     "category": "specialfood",
@@ -222,7 +222,7 @@
   {
     "id": 21,
     "title": "Tiramisu",
-    "desc": "Classic Italian dessert with coffee flavor",
+    "desc": "Classic Italian dessert with coffee flavor that is perfect for any occasion. Enjoy the rich and creamy texture. A true treat for any dessert lover.",
     "available_count": 18,
     "image": "/data/Tiramisu.png",
     "category": "dessert",
@@ -233,7 +233,7 @@
   {
     "id": 22,
     "title": "Grilled Salmon",
-    "desc": "Healthy and delicious grilled salmon",
+    "desc": "Healthy and delicious grilled salmon that is perfect for a meal. Enjoy the tender and flavorful fish. A great choice for any seafood lover.",
     "available_count": 15,
     "image": "/data/Grilled_Salmon.png",
     "category": "dinner",
@@ -244,7 +244,7 @@
   {
     "id": 23,
     "title": "Orange Juice",
-    "desc": "Freshly squeezed orange juice",
+    "desc": "Freshly squeezed orange juice that is perfect for a refreshing drink. Enjoy the sweet and tangy flavor. A great choice for any time of the day.",
     "available_count": 55,
     "image": "/data/Orange_Juice.png",
     "category": "drinks",
@@ -255,7 +255,7 @@
   {
     "id": 24,
     "title": "Potato Chips",
-    "desc": "Crispy and salty potato chips",
+    "desc": "Crispy and salty potato chips that are perfect for snacking. Enjoy the classic flavor and satisfying crunch. A great choice for any time of the day.",
     "available_count": 50,
     "image": "/data/Potato_Chips.png",
     "category": "snacks",
@@ -266,7 +266,7 @@
   {
     "id": 25,
     "title": "Special Dumplings",
-    "desc": "Chinese dumplings with special fillings",
+    "desc": "Chinese dumplings with special fillings that are full of flavor. A perfect meal for any dumpling lover. Enjoy the rich and savory taste.",
     "available_count": 12,
     "image": "/data/Special Dumplings.png",
     "category": "specialfood",
@@ -277,7 +277,7 @@
   {
     "id": 26,
     "title": "Panna Cotta",
-    "desc": "Creamy Italian dessert with berry sauce",
+    "desc": "Creamy Italian dessert with berry sauce that is perfect for any occasion. Enjoy the smooth and rich texture. A true treat for any dessert lover.",
     "available_count": 20,
     "image": "/data/Panna_Cotta.png",
     "category": "dessert",
@@ -288,7 +288,7 @@
   {
     "id": 27,
     "title": "Beef Steak",
-    "desc": "Juicy and tender beef steak",
+    "desc": "Juicy and tender beef steak that is perfect for a meal. Enjoy the rich and savory flavor. A great choice for any meat lover.",
     "available_count": 10,
     "image": "/data/Beef_Steak.png",
     "category": "dinner",
@@ -299,7 +299,7 @@
   {
     "id": 28,
     "title": "Herbal Tea",
-    "desc": "Relaxing and healthy herbal tea",
+    "desc": "Relaxing and healthy herbal tea that is perfect for any time of the day. Enjoy the soothing and refreshing flavor. A great choice for a calming drink.",
     "available_count": 50,
     "image": "/data/Herbal_Tea.png",
     "category": "drinks",
@@ -310,7 +310,7 @@
   {
     "id": 29,
     "title": "Onion Rings",
-    "desc": "Crispy and golden onion rings",
+    "desc": "Crispy and golden onion rings that are perfect for snacking. Enjoy the classic flavor and satisfying crunch. A great choice for any time of the day.",
     "available_count": 30,
     "image": "/data/Onion_Rings.png",
     "category": "snacks",
@@ -321,7 +321,7 @@
   {
     "id": 30,
     "title": "Special Paella",
-    "desc": "Traditional Spanish paella with seafood",
+    "desc": "Traditional Spanish paella with seafood that is full of flavor. A perfect dish for a special occasion. Enjoy the rich and savory taste.",
     "available_count": 8,
     "image": "/data/Special_Paella.png",
     "category": "specialfood",

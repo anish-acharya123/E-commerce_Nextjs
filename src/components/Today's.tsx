@@ -14,9 +14,11 @@ export default function Todays() {
 
         <EachItem data={foodData.slice(10, 15)} />
         <div className="text-center">
-          <button className="bg-button px-8 py-2 rounded-md text-white hover:bg-primary  transition-colors duration-300 text-center">
-            <Link href={"/category/allfoods"}> View all Foods</Link>
-          </button>
+          <Link href={"/allfoods"}>
+            <button className="bg-button px-8 py-2 rounded-md text-white hover:bg-primary  transition-colors duration-300 text-center">
+              View all Foods
+            </button>
+          </Link>
         </div>
 
         <hr className="mt-10 " />
