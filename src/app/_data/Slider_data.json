@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "tagline": "Your one-stop shop for fresh groceries and tasty essentials, all at great prices!",
+    "title": "Up to 20% off Voucher",
+    "image": "/Carousel/first.png"
+  },
+  {
+    "id": 2,
+    "tagline": "Savor unbeatable deals on your favorite burgers and fast food!",
+    "title": "Delicious deals, every day.",
+    "image": "/Carousel/burger.png"
+  },
+  {
+    "id": 3,
+    "tagline": "Indulge in flavorful biryanis and more, delivered right to your door.",
+    "title": "Explore our tasty collection.",
+    "image": "/Carousel/briyani.png"
+  }
+]

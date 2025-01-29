@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  scale: 1.8;
+  margin-left: 15px !important;
+}

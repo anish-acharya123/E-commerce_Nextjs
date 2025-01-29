@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "title": "Chocolate Cake",
+    "desc": "Delicious and rich chocolate cake",
+    "available_count": 20,
+    "image": "/data/chocolatecake.png",
+    "category": "dessert",
+    "rating": 4.8,
+    "no_of_rating_people": 150
+  },
+  {
+    "id": 2,
+    "title": "Veggie Pizza",
+    "desc": "Healthy and tasty veggie pizza",
+    "available_count": 15,
+    "image": "/data/pizza.png",
+    "category": "dinner",
+    "rating": 4.5,
+    "no_of_rating_people": 200
+  },
+  {
+    "id": 3,
+    "title": "Lemonade",
+    "desc": "Refreshing lemonade drink",
+    "available_count": 50,
+    "image": "/data/Lemonade.png",
+    "category": "drinks",
+    "rating": 4.7,
+    "no_of_rating_people": 120
+  },
+  {
+    "id": 4,
+    "title": "Nachos",
+    "desc": "Crispy and cheesy nachos",
+    "available_count": 30,
+    "image": "/data/Nachos.png",
+    "category": "snacks",
+    "rating": 4.6,
+    "no_of_rating_people": 180
+  },
+  {
+    "id": 5,
+    "title": "Special Sushi",
+    "desc": "Exclusive and delicious sushi",
+    "available_count": 10,
+    "image": "/data/Sushi.png",
+    "category": "specialfood",
+    "rating": 4.9,
+    "no_of_rating_people": 110
+  },
+  {
+    "id": 6,
+    "title": "Apple Pie",
+    "desc": "Classic apple pie with a flaky crust",
+    "available_count": 25,
+    "image": "/data/Apple_Pie.png",
+    "category": "dessert",
+    "rating": 4.7,
+    "no_of_rating_people": 130
+  },
+  {
+    "id": 7,
+    "title": "Chicken Burger",
+    "desc": "Juicy chicken burger with fresh lettuce",
+    "available_count": 18,
+    "image": "/data/Chicken_Burger.png",
+    "category": "dinner",
+    "rating": 4.6,
+    "no_of_rating_people": 160
+  },
+  {
+    "id": 8,
+    "title": "Iced Coffee",
+    "desc": "Chilled coffee with a hint of vanilla",
+    "available_count": 40,
+    "image": "/data/Iced_Coffee.png",
+    "category": "drinks",
+    "rating": 4.8,
+    "no_of_rating_people": 140
+  },
+  {
+    "id": 9,
+    "title": "French Fries",
+    "desc": "Crispy and golden french fries",
+    "available_count": 35,
+    "image": "/data/French_Fries.png",
+    "category": "snacks",
+    "rating": 4.5,
+    "no_of_rating_people": 170
+  },
+  {
+    "id": 10,
+    "title": "Special Ramen",
+    "desc": "Flavorful ramen with special ingredients",
+    "available_count": 12,
+    "image": "/data/Special_Ramen.png",
+    "category": "specialfood",
+    "rating": 4.9,
+    "no_of_rating_people": 115
+  },
+  {
+    "id": 11,
+    "title": "Brownie",
+    "desc": "Rich and fudgy chocolate brownie",
+    "available_count": 22,
+    "image": "/data/Brownie.png",
+    "category": "dessert",
+    "rating": 4.8,
+    "no_of_rating_people": 145
+  },
+  {
+    "id": 12,
+    "title": "Margherita Pizza",
+    "desc": "Classic margherita pizza with fresh basil",
+    "available_count": 20,
+    "image": "/data/Margherita_Pizza.png",
+    "category": "dinner",
+    "rating": 4.7,
+    "no_of_rating_people": 190
+  },
+  {
+    "id": 13,
+    "title": "Mango Smoothie",
+    "desc": "Refreshing mango smoothie",
+    "available_count": 45,
+    "image": "/data/Mango_Smoothi.png",
+    "category": "drinks",
+    "rating": 4.6,
+    "no_of_rating_people": 125
+  },
+  {
+    "id": 14,
+    "title": "Popcorn",
+    "desc": "Buttery and salty popcorn",
+    "available_count": 50,
+    "image": "/data/Popcorn.png",
+    "category": "snacks",
+    "rating": 4.5,
+    "no_of_rating_people": 160
+  },
+  {
+    "id": 15,
+    "title": "Special Paella",
+    "desc": "Traditional Spanish paella with seafood",
+    "available_count": 8,
+    "image": "/data/Special_Paella.png",
+    "category": "specialfood",
+    "rating": 4.9,
+    "no_of_rating_people": 105
+  },
+  {
+    "id": 16,
+    "title": "Cheesecake",
+    "desc": "Creamy and smooth cheesecake",
+    "available_count": 20,
+    "image": "/data/Cheesecake.png",
+    "category": "dessert",
+    "rating": 4.8,
+    "no_of_rating_people": 150
+  },
+  {
+    "id": 17,
+    "title": "BBQ Chicken Wings",
+    "desc": "Spicy and tangy BBQ chicken wings",
+    "available_count": 25,
+    "image": "/data/BBQ_Chicken_Wings.png",
+    "category": "dinner",
+    "rating": 4.7,
+    "no_of_rating_people": 180
+  },
+  {
+    "id": 18,
+    "title": "Green Tea",
+    "desc": "Healthy and refreshing green tea",
+    "available_count": 60,
+    "image": "/data/Green_Tea.png",
+    "category": "drinks",
+    "rating": 4.6,
+    "no_of_rating_people": 130
+  },
+  {
+    "id": 19,
+    "title": "Pretzels",
+    "desc": "Salty and crunchy pretzels",
+    "available_count": 40,
+    "image": "/data/Pretzels.png",
+    "category": "snacks",
+    "rating": 4.5,
+    "no_of_rating_people": 150
+  },
+  {
+    "id": 20,
+    "title": "Special Tacos",
+    "desc": "Mexican tacos with special fillings",
+    "available_count": 10,
+    "image": "/data/Special_Tacos.png",
+    "category": "specialfood",
+    "rating": 4.9,
+    "no_of_rating_people": 120
+  },
+  {
+    "id": 21,
+    "title": "Tiramisu",
+    "desc": "Classic Italian dessert with coffee flavor",
+    "available_count": 18,
+    "image": "/data/Tiramisu.png",
+    "category": "dessert",
+    "rating": 4.8,
+    "no_of_rating_people": 140
+  },
+  {
+    "id": 22,
+    "title": "Grilled Salmon",
+    "desc": "Healthy and delicious grilled salmon",
+    "available_count": 15,
+    "image": "/data/Grilled_Salmon.png",
+    "category": "dinner",
+    "rating": 4.7,
+    "no_of_rating_people": 170
+  },
+  {
+    "id": 23,
+    "title": "Orange Juice",
+    "desc": "Freshly squeezed orange juice",
+    "available_count": 55,
+    "image": "/data/Orange_Juice.png",
+    "category": "drinks",
+    "rating": 4.6,
+    "no_of_rating_people": 135
+  },
+  {
+    "id": 24,
+    "title": "Potato Chips",
+    "desc": "Crispy and salty potato chips",
+    "available_count": 50,
+    "image": "/data/Potato_Chips.png",
+    "category": "snacks",
+    "rating": 4.5,
+    "no_of_rating_people": 160
+  },
+  {
+    "id": 25,
+    "title": "Special Dumplings",
+    "desc": "Chinese dumplings with special fillings",
+    "available_count": 12,
+    "image": "/data/Special Dumplings.png",
+    "category": "specialfood",
+    "rating": 4.9,
+    "no_of_rating_people": 110
+  },
+  {
+    "id": 26,
+    "title": "Panna Cotta",
+    "desc": "Creamy Italian dessert with berry sauce",
+    "available_count": 20,
+    "image": "/data/Panna_Cotta.png",
+    "category": "dessert",
+    "rating": 4.8,
+    "no_of_rating_people": 145
+  },
+  {
+    "id": 27,
+    "title": "Beef Steak",
+    "desc": "Juicy and tender beef steak",
+    "available_count": 10,
+    "image": "/data/Beef_Steak.png",
+    "category": "dinner",
+    "rating": 4.7,
+    "no_of_rating_people": 160
+  },
+  {
+    "id": 28,
+    "title": "Herbal Tea",
+    "desc": "Relaxing and healthy herbal tea",
+    "available_count": 50,
+    "image": "/data/Herbal_Tea.png",
+    "category": "drinks",
+    "rating": 4.6,
+    "no_of_rating_people": 120
+  },
+  {
+    "id": 29,
+    "title": "Onion Rings",
+    "desc": "Crispy and golden onion rings",
+    "available_count": 30,
+    "image": "/data/Onion_Rings.png",
+    "category": "snacks",
+    "rating": 4.5,
+    "no_of_rating_people": 150
+  },
+  {
+    "id": 30,
+    "title": "Special Paella",
+    "desc": "Traditional Spanish paella with seafood",
+    "available_count": 8,
+    "image": "/data/Special_Paella.png",
+    "category": "specialfood",
+    "rating": 4.9,
+    "no_of_rating_people": 105
+  }
+]
