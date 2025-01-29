@@ -16,7 +16,7 @@ export default function OurFood() {
             <Link href={"/category/allfoods"}> View all</Link>
           </button>
         </div>
-        <EachItem data={foodData.slice(0, 15)} />
+        <EachItem data={foodData.slice(0, 10)} />
       </Wrapper>
     </div>
   );

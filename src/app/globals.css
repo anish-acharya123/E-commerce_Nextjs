@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,4 +8,14 @@
   background-color: white !important;
   scale: 1.8;
   margin-left: 15px !important;
+}
+
+
+/* ///scroll bar  */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 60px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #477E24;
 }
