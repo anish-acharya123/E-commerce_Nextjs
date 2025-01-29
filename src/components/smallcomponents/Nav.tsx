@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 export function Nav({ children }: { children: React.ReactNode }) {
   return (
-    <nav className="py-6 z-10 bg-white  shadow-md sticky top-0 text-lg ">
+    <nav className="py-6 z-50 bg-white  shadow-md sticky top-0 text-lg ">
       {children}
     </nav>
   );
