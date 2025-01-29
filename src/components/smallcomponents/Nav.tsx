@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 export function Nav({ children }: { children: React.ReactNode }) {
   return (
-    <nav className="py-4 z-10 bg-white  shadow-md sticky top-0 text-lg ">
+    <nav className="py-6 z-10 bg-white  shadow-md sticky top-0 text-lg ">
       {children}
     </nav>
   );
@@ -15,11 +15,11 @@ export function Nav({ children }: { children: React.ReactNode }) {
 
 export function NavLink(props: Omit<ComponentProps<typeof Link>, "className">) {
   const pathname = usePathname();
-  return (  
+  return (
     <Link
       {...props}
       className={`font-medium ${
-        pathname === props.href && "underline underline-offset-4"
+        pathname === props.href && "underline underline-offset-4 text-primary "
       }`}
     />
   );
@@ -30,7 +30,7 @@ export function NavItems() {
     <>
       {NavListConstant.map((item) => (
         <NavLink href={item.path} key={item.id}>
-          <span className=" hover:underline hover:underline-offset-4  md:hover:text-primary-light transition-colors duration-500 ">
+          <span className=" hover:underline hover:underline-offset-4  md:hover:text-primary transition-colors duration-500 ">
             {item.label}
           </span>
         </NavLink>
@@ -40,18 +40,26 @@ export function NavItems() {
 }
 
 export function NavLogAndSign() {
+  const [search, setSearch] = useState("");
   return (
     <>
-      <Link href={"/login"}>
-        <span className=" md:border-primary-light  md:border md:px-4 md:py-2 md:hover:text-primary-light rounded-md transition-colors duration-300 border px-6  py-2">
-          Login
-        </span>
-      </Link>
-      <Link href={"/signup"}>
-        <span className=" md:border md:px-4 md:py-2 md:bg-primary-light md:text-white md:hover:text-primary-light rounded-md md:border-primary-light md:hover:bg-white transition-colors duration-300 border bg-white text-primary-light px-5 py-2">
-          Signup
-        </span>
-      </Link>
+      <div className="py-1 px-3 bg-gray-200 rounded-sm outline-none flex justify-center items-center">
+        <input
+          type="text"
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="What are you looking for?"
+          className="bg-gray-200 outline-none"
+        />
+        <Icon icon={"lucide:search"} className="text-xl" />
+      </div>
+
+      <button>
+        <Icon icon={"solar:heart-outline"} className="text-3xl" />
+      </button>
+
+      <button>
+        <Icon icon={"cil:cart"} className="text-3xl" />
+      </button>
     </>
   );
 }

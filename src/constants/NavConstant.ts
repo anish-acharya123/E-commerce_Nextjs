@@ -1,5 +1,6 @@
 export const NavListConstant = [
-  { id: 1, label: "Categories", path: "/categories" },
-  { id: 2, label: "About Us", path: "/about" },
-  { id: 3, label: "Help?", path: "/help" },
+  { id: 1, label: "Home", path: "/" },
+  { id: 2, label: "Contact", path: "/about" },
+  { id: 3, label: "About", path: "/help" },
+  { id: 4, label: "SignUp", path: "/signup" },
 ];

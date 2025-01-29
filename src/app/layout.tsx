@@ -19,8 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <body className={`${roboto.className} antialiased `}> */}
-      <body className={`antialiased `}>
+      <body className={`${inter.className} antialiased `}>
+      {/* <body className={`antialiased `}> */}
         <div className=" mx-auto min-h-screen flex flex-col scroll-smooth">
           <Navbar />
           <main className="flex-1">

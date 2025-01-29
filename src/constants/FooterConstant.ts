@@ -4,16 +4,16 @@ export const Polices = [
     link: "/privacy-policy",
   },
   {
-    title: "Terms of Service",
-    link: "/terms-of-service",
+    title: "Terms of Use",
+    link: "/terms-of-use",
   },
   {
-    title: "Refund Policy",
-    link: "/refund-policy",
+    title: "FAQ",
+    link: "/faq",
   },
   {
-    title: "Public Queries",
-    link: "/public-queries",
+    title: "Contact",
+    link: "/contact",
   },
 ];
 
@@ -24,36 +24,36 @@ export const ContactList = [
     icon: "mdi:address-marker-outline",
   },
   {
-    // title: "Phone",
-    title: "+977-9841234567",
-    icon: "basil:phone-in-outline",
+    // title: "Email",
+    title: "foodzone@gmail.com",
+    icon: "eva:email-outline",
   },
   {
-    // title: "Email",
-    title: "gririrajaryal2020@gmail.com",
-    icon: "eva:email-outline",
+    // title: "Phone",
+    title: "+977-9812345678",
+    icon: "basil:phone-in-outline",
   },
 ];
 
-export const SocialMedia = [
+export const Account = [
   {
-    title: "Facebook",
-    link: "https://www.facebook.com/",
-    icon: "mingcute:facebook-fill",
+    title: "My Account",
+    link: "/profile",
+    // icon: "mingcute:facebook-fill",
   },
   {
-    title: "Instagram",
-    link: "https://www.instagram.com/",
-    icon: "ri:instagram-fill",
+    title: "Login / Register",
+    link: "/login",
+    // icon: "ri:instagram-fill",
   },
   {
-    title: "Twitter",
-    link: "https://twitter.com/",
-    icon: "formkit:twitter",
+    title: "Cart",
+    link: "/cart",
+    // icon: "formkit:twitter",
   },
   {
-    title: "LinkedIn",
-    link: "https://www.linkedin.com/",
-    icon: "entypo-social:linkedin-with-circle",
+    title: "Whishlist",
+    link: "/whishlist",
+    // icon: "entypo-social:linkedin-with-circle",
   },
 ];

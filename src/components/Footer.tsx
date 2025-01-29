@@ -1,42 +1,64 @@
 import Image from "next/image";
 import Wrapper from "./layouts/Wrapper";
 import { FooterFirst } from "./smallcomponents/FooterComponent";
-import Link from "next/link";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Footer() {
   return (
-    <footer className="py-10 bg-secondary   border-t-2 bg-green-400 ">
+    <footer className="py-10 bg-secondary   border-t-2 text-white ">
       <Wrapper>
-        <div className="flex  flex-col gap-10">
-          <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm:gap-y-0 gap-y-10 grid-cols-1 gap-4 bg-red- ">
+        <div className="flex  flex-col gap-8">
+          <section className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 sm:gap-y-0 gap-y-10 grid-cols-1 gap-4 bg-red- ">
+            <div>
+              <p className="text-2xl font-semibold pb-2  ">Exclusive</p>
+              <span className="text-gray-200">Get 20% off your order</span>
+
+              <div className=" border-2 w-48 px-2 mt-2 py-1 rounded-md flex items-center">
+                <input
+                  type="text"
+                  className="bg-transparent  outline-none w-36 "
+                  placeholder="Enter your email"
+                />
+                <Icon icon="ic:twotone-send" className="text-2xl text-gray-300"/>
+              </div>
+            </div>
             <FooterFirst />
             <div
               className=""
               // data-aos="fade-up" data-aos-duration="2500"
             >
-              <p className="text-2xl font-semibold pb-2 border-b-4 sm:w-1/2">
-                Payment Method
-              </p>
+              <p className="text-2xl font-semibold pb-2  ">Download App</p>
+              <span className="text-gray-200">
+                Save $3 with App New User Only
+              </span>
 
-              <Image
-                src={"/khalti.jpg"}
-                alt="khalti"
-                width={200}
-                height={200}
-                className="pt-2"
-              />
+              <div className="flex gap-4 pt-4 ">
+                <Image
+                  src={"/qr.png"}
+                  alt="khalti"
+                  width={100}
+                  height={100}
+                  className=""
+                />
+                <div className="flex flex-col items-center justify-between gap-4 ">
+                  <button className="border-2 px-4 flex-1 flex items-center  gap-2  rounded-md ">
+                    <Icon
+                      icon="streamline:play-store-solid"
+                      className="text-xl"
+                    />
+                    <span>Play Store</span>
+                  </button>
+                  <button className="border-2 px-4 flex-1  flex items-center  gap-2  rounded-md">
+                    <Icon icon="ic:twotone-apple" className="text-xl" />{" "}
+                    <span>App Store</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </section>
           <hr />
-          <section className="flex justify-between md:flex-row flex-col items-center text-center gap-4">
-            <p> ©copyright 2025 Giriraj Aryal. All rights reserved.</p>
-            <p>
-              Designed and Developed by
-              <Link href="https://anish-acharya.com.np" className="  font-bold">
-                {" "}
-                @anish_acharya❤️
-              </Link>
-            </p>
+          <section className="text-center ">
+            <p> ©copyright 2025 Anish Acharya. All rights reserved.</p>
           </section>
         </div>
       </Wrapper>
