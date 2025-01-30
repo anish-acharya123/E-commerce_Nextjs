@@ -1,9 +1,10 @@
 import Wrapper from "@/components/layouts/Wrapper";
-import StarRating from "@/components/ui/Startrating";
+// import StarRating from "@/components/ui/Startrating";
 import foods from "@/app/_data/foods.json";
 import Image from "next/image";
 import EachProductDetail from "@/components/smallcomponents/EachProductDetail";
 import Todays from "@/components/Today's";
+import { notFound } from "next/navigation";
 
 export default async function EachProduct({
   params,
@@ -14,13 +15,8 @@ export default async function EachProduct({
   const product = foods.find((food) => food.id.toLocaleString() === productId);
 
   if (!product) {
-    return <div>Product not found</div>;
+    notFound();
   }
-
-  // const [count, setCount] = useState(1);
-
-  // const incrementCount = () => setCount(count + 1);
-  // const decrementCount = () => setCount(count > 1 ? count - 1 : 1);
 
   return (
     <section className="py-12">

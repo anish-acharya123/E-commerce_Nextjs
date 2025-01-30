@@ -3,6 +3,7 @@ import foodData from "@/app/_data/foods.json";
 import EachItem from "@/components/smallcomponents/EachItem";
 import Link from "next/link";
 import Filter from "@/components/smallcomponents/Filtering";
+import { notFound } from "next/navigation";
 
 export default async function Category({
   params,
@@ -17,6 +18,10 @@ export default async function Category({
     );
   } else {
     categoryFood = foodData;
+  }
+
+  if (categoryFood.length == 0) {
+    notFound();
   }
   return (
     <section className="py-10">

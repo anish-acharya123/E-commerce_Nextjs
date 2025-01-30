@@ -34,14 +34,23 @@ const CartContext = createContext<CartContextProps>({
 });
 
 const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [cartState, setCartState] = useState<CartState>(() => {
-    const localData = localStorage.getItem("cart");
-    return localData ? JSON.parse(localData) : initialCartState;
-  });
+  const [cartState, setCartState] = useState<CartState>(initialCartState);
+  const [isClient, setIsClient] = useState(false); // Prevent SSR errors
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cartState));
-  }, [cartState]);
+    setIsClient(true);
+
+    const localData = localStorage.getItem("cart");
+    if (localData) {
+      setCartState(JSON.parse(localData));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      localStorage.setItem("cart", JSON.stringify(cartState));
+    }
+  }, [cartState, isClient]);
 
   const addItemToCartHandler = (item: CartItem) => {
     setCartState((prevState) => {
