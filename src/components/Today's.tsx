@@ -2,15 +2,13 @@ import Link from "next/link";
 import Wrapper from "./layouts/Wrapper";
 import foodData from "@/app/_data/foods.json";
 import EachItem from "./smallcomponents/EachItem";
+import Title from "./smallcomponents/Title";
 
 export default function Todays() {
   return (
     <section className=" py-10">
       <Wrapper>
-        <div className="flex items-center  gap-3">
-          <span className="w-6 h-14 bg-primary"></span>
-          <p className="text-2xl font-bold text-primary  ">Today{"'"}s</p>
-        </div>
+        <Title text="Today's" />
 
         <EachItem data={foodData.slice(10, 15)} />
         <div className="text-center">

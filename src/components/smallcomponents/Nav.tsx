@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
-import React, { ComponentProps, useState } from "react";
+import React, { ComponentProps, useContext, useState } from "react";
 import { usePathname } from "next/navigation";
 import { NavListConstant } from "@/constants/NavConstant";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { CartContext } from "@/context/Cartcontext";
 
 export function Nav({ children }: { children: React.ReactNode }) {
   return (
@@ -41,6 +42,8 @@ export function NavItems() {
 
 export function NavLogAndSign() {
   const [search, setSearch] = useState("");
+  const {items} = useContext(CartContext)
+  const len = items.length
   return (
     <>
       <div className="py-1 px-3 bg-gray-200 rounded-sm outline-none flex justify-center items-center">
@@ -53,13 +56,14 @@ export function NavLogAndSign() {
         <Icon icon={"lucide:search"} className="text-xl" />
       </div>
 
-      <button>
+      <Link href={"/wishlist"}>
         <Icon icon={"solar:heart-outline"} className="text-3xl" />
-      </button>
+      </Link>
 
-      <button>
+      <Link href={"/cart"} className="relative">
         <Icon icon={"cil:cart"} className="text-3xl" />
-      </button>
+        <p className="absolute top-[-10px] right-[-10px] bg-primary text-sm text-white rounded-full px-2">{len}</p>
+      </Link>
     </>
   );
 }

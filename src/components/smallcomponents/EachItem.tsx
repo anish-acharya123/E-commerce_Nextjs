@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import StarRating from "../ui/Startrating";
 import GridComponent from "../layouts/ReusedComponent";
+import { useContext } from "react";
+import { CartContext } from "@/context/Cartcontext";
 // import { Icon } from "@iconify/react/dist/iconify.js";
 
 export type EachdataProps = {
@@ -17,11 +21,12 @@ export type EachdataProps = {
 };
 
 export default function EachItem({ data }: { data: EachdataProps[] }) {
+  const { addItem } = useContext(CartContext);
+
   return (
     <GridComponent>
       {data.map((item) => (
-        <Link
-          href={`/${item.category}/${item.id}`}
+        <div
           key={item.id}
           className="space-y-2  hover:bg-gray-100 transition-colors duration-500 rounded-bl-md rounded-br-md "
         >
@@ -34,12 +39,18 @@ export default function EachItem({ data }: { data: EachdataProps[] }) {
               className="h-32 w-32"
             />
             <div className=" opacity-0 bg-gray-400 hover:opacity-90 duration-500 absolute inset-0 z-10 flex justify-center items-center  text-white ">
-              <button className="px-16 py-2 bg-white  text-primary">
+              <button
+                className="px-16 py-2 bg-white  text-primary"
+                onClick={() => addItem({ ...item, quantity: 1 })}
+              >
                 Add to Cart
               </button>
             </div>
           </div>
-          <div className="space-y-2  pb-4">
+          <Link
+            className="space-y-2  pb-4"
+            href={`/${item.category}/${item.id}`}
+          >
             <p className="font-medium pt-2 px-1 w-full">{item.title}</p>
             <p className="font-medium px-1 w-full text-primary">
               Rs. {item.price}
@@ -48,8 +59,8 @@ export default function EachItem({ data }: { data: EachdataProps[] }) {
               <StarRating rating={item.rating} />
               <p className="text-gray-500 ml-1">{`(${item.no_of_rating_people})`}</p>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       ))}
     </GridComponent>
   );

@@ -8,7 +8,7 @@ export default function CustomerService() {
       <Wrapper>
         <div className="flex justify-center items-center gap-20">
           {CustomerServiceConstant.map((item) => (
-            <div className="flex justify-center items-center flex-col gap-4">
+            <div key={item.id} className="flex justify-center items-center flex-col gap-4">
               <div className="bg-primary p-6 rounded-full ">
                 <Icon icon={item.icon} className="text-4xl text-white"/>
               </div>

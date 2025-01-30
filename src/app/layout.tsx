@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import AOSInitializer from "@/components/smallcomponents/AOSInitializer";
 import Footer from "@/components/Footer";
+import { CartProvider } from "@/context/Cartcontext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -20,15 +21,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased `}>
-      {/* <body className={`antialiased `}> */}
-        <div className=" mx-auto min-h-screen flex flex-col scroll-smooth">
-          <Navbar />
-          <main className="flex-1">
-            {children}
-            <AOSInitializer />
-          </main>
-          <Footer />
-        </div>
+        {/* <body className={`antialiased `}> */}
+        <CartProvider>
+          <div className=" mx-auto min-h-screen flex flex-col scroll-smooth">
+            <Navbar />
+            <main className="flex-1">
+              {children}
+              <AOSInitializer />
+            </main>
+            <Footer />
+          </div>
+        </CartProvider>
       </body>
     </html>
   );

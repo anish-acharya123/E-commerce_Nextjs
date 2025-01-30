@@ -1,12 +1,19 @@
+"use client";
+
 import { Icon } from "@iconify/react/dist/iconify.js";
 import StarRating from "../ui/Startrating";
 import { EachdataProps } from "./EachItem";
+import { CartContext } from "@/context/Cartcontext";
+import { useContext, useState } from "react";
 
 export default function EachProductDetail({
   product,
 }: {
   product: EachdataProps;
 }) {
+  const { addItem } = useContext(CartContext);
+  const [count, setCount] = useState(1);
+
   return (
     <div>
       <section className="space-y-2 py-4">
@@ -28,17 +35,28 @@ export default function EachProductDetail({
       </section>
       <hr className="border-gray-400" />
       <section className="py-4 flex gap-4 items-center ">
-        <div className="flex gap-8 border-black border w-fit items-center  overflow-hidden rounded-md">
-          <button className="border-r w-full px-4 py-2 text-white bg-primary">
+        <div className="flex gap-8 border-black border w-40 items-center  overflow-hidden rounded-md">
+          <button
+            className="border-r px-4 py-2 w-1/4 text-white bg-primary"
+            onClick={() => setCount(count - 1)}
+            disabled={count == 0}
+          >
             -
           </button>
-          <p>01</p>
-          <button className="border-l w-full px-4 py-2 text-white bg-primary">
+          <p className="w-2/4">{count}</p>
+          <button
+            className="border-l w-1/4 px-4 py-2 text-white bg-primary disabled:bg-gray-200"
+            onClick={() => setCount(count + 1)}
+            disabled={count === product.available_count}
+          >
             +
           </button>
         </div>
 
-        <button className="bg-primary py-2 px-4 rounded-md text-white">
+        <button
+          className="bg-primary py-2 px-4 rounded-md text-white"
+          onClick={() => addItem({ ...product, quantity: count })}
+        >
           Add to Cart
         </button>
         <button className=" py-2 px-4 rounded-md border border-gray-500">
@@ -51,14 +69,18 @@ export default function EachProductDetail({
             <Icon icon={"iconamoon:delivery"} className="text-3xl" />
             <div>
               <p>FREE AND FAST DELIVERY</p>
-              <p className="text-sm">Enter your postal code for Delivery Availability</p>
+              <p className="text-sm">
+                Enter your postal code for Delivery Availability
+              </p>
             </div>
           </div>
           <div className="flex items-center px-4 gap-10 border-t  border-black py-2">
             <Icon icon={"ri:customer-service-line"} className="text-3xl" />
             <div>
               <p>24/7 CUSTOMER SERVICES</p>
-              <p className="text-sm">Enter your postal code for Delivery Availability</p>
+              <p className="text-sm">
+                Enter your postal code for Delivery Availability
+              </p>
             </div>
           </div>
         </div>
