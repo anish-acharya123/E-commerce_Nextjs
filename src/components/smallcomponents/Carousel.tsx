@@ -38,29 +38,20 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
       speed={800}
     >
       {data.map(({ id, image, tagline, title }) => (
-        <SwiperSlide key={id} className="relative">
-          <div
-            className="absolute w-full h-full   bg-blend-multiply shadow-xl  bg-secondary"
-            style={
-              {
-                // backgroundImage: `url(${image}) `,
-                // clipPath: "polygon(0 20%, 100% 0, 100% 80%, 0 100%)",
-              }
-            }
-          />
+        <SwiperSlide key={id} className="relative ">
           <div
             data-aos="fade-up"
-            className="relative z-10 h-full  w-full flex items-center justify-center"
+            className="relative z-10 h-full  w-full flex items-center justify-center    bg-secondary"
           >
             <div className="  w-full ">
               <Wrapper>
-                <div className="flex items-center  justify-between">
-                  <div className="text-left space-y-4">
-                    <p className="text-3xl sm:text-7xl  font-bold text-white ">
+                <div className="flex items-center  justify-between sm:flex-row flex-col-reverse ">
+                  <div className="sm:text-left text-center space-y-4">
+                    <p className="md:text-7xl sm:text-5xl text-3xl font-bold text-white ">
                       {title}
                     </p>
                     {tagline && (
-                      <p className="text-md sm:text-xl lg:text-xl font- text-white ">
+                      <p className="text-md  lg:text-xl font- text-white ">
                         {tagline}
                       </p>
                     )}
@@ -75,7 +66,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                       alt="crausel image"
                       width={500}
                       height={500}
-                      className=""
+                      className=" h-52 w-52 md:h-80 md:w-80 lg:h-96 lg:w-auto"
                     />
                   </div>
                 </div>
