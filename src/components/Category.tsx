@@ -11,15 +11,15 @@ export default function Category() {
       <Wrapper>
       <Title text="Category" />
 
-        <h2 className="text-3xl font-semibold pt-6">Browse By Category</h2>
+        <h2 className="md:text-3xl text-2xl font-semibold pt-6">Browse By Category</h2>
         <GridComponent>
           {CategoryConst.map((item) => (
             <Link
               key={item.id}
               href={item.link}
-              className="border-2 rounded-md py-12 flex gap-4 items-center justify-center flex-col"
+              className="border-2 rounded-md md:py-12 py-8 flex gap-4 items-center justify-center flex-col"
             >
-              <Icon icon={item.icon} className="text-5xl" />
+              <Icon icon={item.icon} className="md:text-5xl text-3xl" />
               <p className="font-semibold">{item.title}</p>
             </Link>
           ))}

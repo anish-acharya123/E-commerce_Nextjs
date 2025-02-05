@@ -15,7 +15,7 @@ type sectionProps = {
 function Section({ title, items, isLink = true }: sectionProps) {
   return (
     <div className="">
-      <p className=" font-medium pb-2  text-2xl">{title}</p>
+      <p className=" font-medium md:text-2xl text-xl  pb-2  ">{title}</p>
       <div className="pt-2 space-y-4">
         {items.map((item, index) =>
           isLink ? (
@@ -27,14 +27,14 @@ function Section({ title, items, isLink = true }: sectionProps) {
               {item.icon && (
                 <Icon icon={item.icon} className="inline text-xl" />
               )}
-              <span>{item.title}</span>
+              <span className="md:text-base text-sm">{item.title}</span>
             </Link>
           ) : (
             <div key={index} className="flex items-center gap-2">
               {item.icon && (
                 <Icon icon={item.icon} className="inline text-xl" />
               )}
-              <span>{item.title}</span>
+              <span className="md:text-base text-sm">{item.title}</span>
             </div>
           )
         )}

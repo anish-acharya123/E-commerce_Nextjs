@@ -8,7 +8,7 @@ import { CartContext } from "@/context/Cartcontext";
 
 export function Nav({ children }: { children: React.ReactNode }) {
   return (
-    <nav className="py-6 z-50 bg-white  shadow-md sticky top-0 text-lg ">
+    <nav className="md:py-6 py-4 z-50 bg-white  shadow-md sticky top-0 text-lg ">
       {children}
     </nav>
   );
