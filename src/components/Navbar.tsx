@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="flex  justify-between items-center">
           <section>
             <Link href={"/"}>
-              <h1 className="text-3xl font-bold text-primary">FOODZONE</h1>
+              <h1 className="md:text-3xl text-2xl font-bold text-primary">FOODZONE</h1>
             </Link>
           </section>
           <section className="lg:space-x-14 space-x-6 md:block hidden">

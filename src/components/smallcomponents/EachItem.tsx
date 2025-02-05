@@ -36,7 +36,7 @@ export default function EachItem({ data }: { data: EachdataProps[] }) {
               alt={item.title}
               height={200}
               width={200}
-              className="h-32 w-32"
+              className="sm:h-32  sm:w-32 h-28 w-28"
             />
             <div className=" opacity-0 bg-gray-400 hover:opacity-90 duration-500 absolute inset-0 z-10 flex justify-center items-center  text-white ">
               <button
@@ -51,13 +51,15 @@ export default function EachItem({ data }: { data: EachdataProps[] }) {
             className="space-y-2  pb-4"
             href={`/${item.category}/${item.id}`}
           >
-            <p className="font-medium pt-2 px-1 w-full">{item.title}</p>
-            <p className="font-medium px-1 w-full text-primary">
+            <p className="font-medium pt-2  px-1 text-sm sm:text-base w-full">
+              {item.title}
+            </p>
+            <p className="font-medium px-1 text-sm sm:text-base w-full text-primary">
               Rs. {item.price}
             </p>
             <div className="flex">
               <StarRating rating={item.rating} />
-              <p className="text-gray-500 ml-1">{`(${item.no_of_rating_people})`}</p>
+              <p className="text-gray-500 ml-1 sm:text-base text-xs">{`(${item.no_of_rating_people})`}</p>
             </div>
           </Link>
         </div>

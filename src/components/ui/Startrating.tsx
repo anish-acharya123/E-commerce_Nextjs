@@ -8,9 +8,10 @@ const StarRating = ({ rating }: { rating: number }) => {
         <Icon
           key={index}
           icon={"material-symbols-light:star"}
+          className="sm:text-xl"
           style={{
             color: rating >= index ? "gold" : "gray",
-            fontSize: "24px",
+            // fontSize: "24px",
           }}
         />
       ))}
