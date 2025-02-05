@@ -19,24 +19,24 @@ export default async function EachProduct({
   }
 
   return (
-    <section className="py-12">
+    <section className="md:py-12 py-6">
       <Wrapper>
-        <div className="flex  justify-center gap-10">
+        <div className="flex flex-row flex-wrap justify-center md:gap-10 gap-4">
           <div className="bg-gray-200 flex-1 rounded-md flex items-center justify-center py-32">
             <Image
               src={product.image}
               alt={product.title}
               height={500}
               width={500}
-              className="w-auto h-52 scale-150"
+              className="w-auto lg:h-52 h-32 scale-150 "
             />
           </div>
           <div className="flex-1">
             <EachProductDetail product={product} />
           </div>
         </div>
-        <Todays />
       </Wrapper>
+      <Todays />
     </section>
   );
 }

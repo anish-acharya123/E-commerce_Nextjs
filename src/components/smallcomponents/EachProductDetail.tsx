@@ -17,12 +17,12 @@ export default function EachProductDetail({
   return (
     <div>
       <section className="space-y-2 py-4">
-        <h1 className="text-4xl font-semibold ">{product.title}</h1>
+        <h1 className="md:text-4xl text-2xl font-semibold ">{product.title}</h1>
         <div className="flex">
           <StarRating rating={product.rating} />
-          <p className="text-gray-500 ml-1">{`(${product.no_of_rating_people} Reviews)`}</p>
-          <span className="mx-2"> | </span>
-          <p>
+          <p className="text-gray-500 ml-1 sm:text-base text-xs">{`(${product.no_of_rating_people} Reviews)`}</p>
+          <span className="mx-2 text-sm md:text-base"> | </span>
+          <p className="text-sm md:text-base">
             {product.available_count > 0 ? (
               <span className="text-primary font-semibold">In Stock</span>
             ) : (

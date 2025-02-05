@@ -11,7 +11,7 @@ export default function Home() {
       <Todays />
       <Category />
       <OurFood />
-      {/* <CustomerService /> */}
+      <CustomerService />
     </div>
   );
 }
