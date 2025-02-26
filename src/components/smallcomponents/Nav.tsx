@@ -41,7 +41,7 @@ export function NavItems() {
   );
 }
 
-export function NavLogAndSign() {
+export function SearchAndCard() {
   const [search, setSearch] = useState("");
   const {items} = useContext(CartContext)
   const len = items.length
