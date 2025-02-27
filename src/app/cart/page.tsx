@@ -48,19 +48,19 @@ export default function Cart() {
                   <span>{item.title}</span>
                 </td>
                 <td className="p-3">Rs. {item.price}</td>
-                <td className="p-3 flex items-center    w-32">
+                <td className="p-3 flex items-center  gap-2   w-32 justify-between">
                   <button
-                    className="bg-gray-200 px-2 py-1 rounded-md disabled:bg-gray-400"
+                    className="bg-gray-200 w-[25%] px-2 py-1 rounded-md disabled:bg-gray-400"
                     onClick={() => addItem({ ...item, quantity: -1 })}
                     disabled={item.quantity === 1}
                   >
                     -
                   </button>
-                  <span className="mx-2 bg-button text-white px-3 py-1 rounded-md">
+                  <span className=" bg-button w-[50%] text-center text-white px-3 py-1 rounded-md">
                     {item.quantity}
                   </span>
                   <button
-                    className="bg-gray-200 px-2 py-1 rounded-md"
+                    className="bg-gray-200 px-2 py-1 w-[25%] rounded-md"
                     onClick={() => addItem({ ...item, quantity: 1 })}
                     // disabled = {}
                   >

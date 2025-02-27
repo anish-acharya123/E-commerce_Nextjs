@@ -1,24 +1,18 @@
 "use client";
 
 import FoodData from "@/app/_data/foods.json";
-import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, redirect } from "next/navigation";
+import { ChangeEvent } from "react";
 
 export default function Filter() {
   const allCategory = [...new Set(FoodData.map((item) => item.category))];
-  const [categoryOpen, setCategoryOpen] = useState(false);
   const pathname = usePathname().split("/")[1];
 
   return (
-    <div className="w-1/6 py-10 ">
+    <div className="w-1/6 py-10 lg:block hidden ">
       <div className="bg-gray-200 p-2">
-        <button
-          className="w-full text-left"
-          onClick={() => setCategoryOpen(!categoryOpen)}
-        >
-          Select Category
-        </button>
+        <button className="w-full text-left">Select Category</button>
         <hr className="border-gray-500 my-2" />
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out
@@ -45,3 +39,37 @@ export default function Filter() {
     </div>
   );
 }
+
+export const FilterByDropDown = () => {
+  const allCategory = [...new Set(FoodData.map((item) => item.category))];
+  const pathname = usePathname().split("/")[1];
+
+  const handleredirect = (e: ChangeEvent<HTMLSelectElement>) => {
+    const selectedCategory = e.target.value;
+    redirect(`/${selectedCategory}`);
+  };
+
+  return (
+    <div>
+      <select
+        name=""
+        id=""
+        className=" border-2 px-2 py-1 capitalize"
+        onChange={handleredirect}
+        value={pathname}
+      >
+        {allCategory.map((item, index) => (
+          <option
+            key={index}
+            value={item}
+            className={`${
+              item == pathname && "text-primary underline"
+            } capitalize cursor-pointer`}
+          >
+            {item}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};

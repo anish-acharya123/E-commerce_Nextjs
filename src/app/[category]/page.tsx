@@ -2,7 +2,9 @@ import Wrapper from "@/components/layouts/Wrapper";
 import foodData from "@/app/_data/foods.json";
 import EachItem from "@/components/smallcomponents/EachItem";
 import Link from "next/link";
-import Filter from "@/components/smallcomponents/Filtering";
+import Filter, {
+  FilterByDropDown,
+} from "@/components/smallcomponents/Filtering";
 import { notFound } from "next/navigation";
 
 export default async function Category({
@@ -32,14 +34,19 @@ export default async function Category({
           </Link>{" "}
           / <span className="text-primary">{category}</span>
         </div>
-        <h1 className="text-center text-2xl font-semibold">
-          {" "}
-          Pick Your Favourite
-          <span className="text-primary  capitalize">
+        <div className="lg:block flex justify-between pt-4">
+          <h1 className="lg:text-center  md:text-2xl text-xl font-semibold">
             {" "}
-            {` ${category}`}
-          </span>{" "}
-        </h1>
+            Pick Your Favourite
+            <span className="text-primary  capitalize">
+              {" "}
+              {` ${category}`}
+            </span>{" "}
+          </h1>
+          <div className="lg:hidden block">
+            <FilterByDropDown />
+          </div>
+        </div>
         <div className="flex gap-4">
           {/* <div className="w-48 py-10">hello anish</div> */}
           <Filter />

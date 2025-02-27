@@ -34,18 +34,18 @@ export default function EachProductDetail({
         <p className="">{product.desc}</p>
       </section>
       <hr className="border-gray-400" />
-      <section className="py-4 flex gap-4 items-center ">
-        <div className="flex gap-8 border-black border w-40 items-center  overflow-hidden rounded-md">
+      <section className="py-4 flex  gap-4 items-center ">
+        <div className="flex  justify-between  border-black border md:w-32 w-32  items-center  overflow-hidden rounded-md">
           <button
-            className="border-r px-4 py-2 w-1/4 text-white bg-primary"
+            className=" px-4 py-2  text-white bg-primary"
             onClick={() => setCount(count - 1)}
             disabled={count == 0}
           >
             -
           </button>
-          <p className="w-2/4">{count}</p>
+          <p className=" text-sm md:text-base">{count}</p>
           <button
-            className="border-l w-1/4 px-4 py-2 text-white bg-primary disabled:bg-gray-200"
+            className="  w- px-4 py-2 text-white bg-primary disabled:bg-gray-200"
             onClick={() => setCount(count + 1)}
             disabled={count === product.available_count}
           >
@@ -54,7 +54,7 @@ export default function EachProductDetail({
         </div>
 
         <button
-          className="bg-primary py-2 px-4 rounded-md text-white"
+          className="bg-primary py-3 lg:px-4 px-2 text-sm md:text-base rounded-md text-white"
           onClick={() => addItem({ ...product, quantity: count })}
         >
           Add to Cart

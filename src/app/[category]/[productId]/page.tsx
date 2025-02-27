@@ -21,8 +21,8 @@ export default async function EachProduct({
   return (
     <section className="md:py-12 py-6">
       <Wrapper>
-        <div className="flex flex-row flex-wrap justify-center md:gap-10 gap-4">
-          <div className="bg-gray-200 flex-1 rounded-md flex items-center justify-center py-32">
+        <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
+          <div className="bg-gray-200 flex-1 h-full w-full rounded-md flex items-center justify-center py-32">
             <Image
               src={product.image}
               alt={product.title}
