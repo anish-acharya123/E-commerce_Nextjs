@@ -29,7 +29,7 @@ export default function Cart() {
           <tbody className="">
             {items.map((item) => (
               <tr key={item.id} className="border-b ">
-                <td className="p-3 flex items-center space-x-3">
+                <td className="md:p-3 py-4  flex items-center md:flex-row flex-col md:space-x-3 space-y-3">
                   <figure className="relative">
                     <Image
                       src={item.image}
@@ -39,35 +39,39 @@ export default function Cart() {
                       className="w-10 h-10 rounded"
                     />
                     <button
-                      className="absolute top-[-10px] right-[-10px] text-white bg-red-500 rounded-full px-2"
+                      className="absolute top-[-10px] right-[-10px] text-white  bg-red-500 rounded-full px-2"
                       onClick={() => removeItem(item.id)}
                     >
                       -
                     </button>
                   </figure>
-                  <span>{item.title}</span>
+                  <span className="text-center text-sm md:text-base">
+                    {item.title}
+                  </span>
                 </td>
-                <td className="p-3">Rs. {item.price}</td>
-                <td className="p-3 flex items-center  gap-2   w-32 justify-between">
+                <td className="p-3 text-sm md:text-base">Rs. {item.price}</td>
+                <td className="p-3 flex items-center  md:gap-2 gap-1  text-sm md:text-base  md:w-32 w-24 justify-between">
                   <button
-                    className="bg-gray-200 w-[25%] px-2 py-1 rounded-md disabled:bg-gray-400"
+                    className="bg-gray-200 w-[25%] px-1 md:px-2 text-center py-1 rounded-md disabled:bg-gray-400"
                     onClick={() => addItem({ ...item, quantity: -1 })}
                     disabled={item.quantity === 1}
                   >
                     -
                   </button>
-                  <span className=" bg-button w-[50%] text-center text-white px-3 py-1 rounded-md">
+                  <span className=" bg-button w-[50%] text-center text-white md:px-3 px-2 py-1 rounded-md">
                     {item.quantity}
                   </span>
                   <button
-                    className="bg-gray-200 px-2 py-1 w-[25%] rounded-md"
+                    className="bg-gray-200 px-1 md:px-2 text-center py-1 w-[25%] rounded-md"
                     onClick={() => addItem({ ...item, quantity: 1 })}
                     // disabled = {}
                   >
                     +
                   </button>
                 </td>
-                <td className="p-3">Rs. {item.price * item.quantity}</td>
+                <td className="p-3 text-sm md:text-base text-end md:text-start">
+                  Rs. {item.price * item.quantity}
+                </td>
               </tr>
             ))}
           </tbody>
