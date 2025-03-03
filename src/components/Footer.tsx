@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Wrapper from "./layouts/Wrapper";
-import { FooterFirst } from "./smallcomponents/FooterComponent";
+import { FooterFirst } from "./sections/FooterComponent";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Footer() {
   return (
-    <footer className="py-10 bg-secondary   border-t-2 text-white ">
+    <footer className="py-10 bg-primary  border-t-2 text-white ">
       <Wrapper>
         <div className="flex  flex-col gap-8">
           <section className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 sm:gap-y-0 gap-y-10 grid-cols-1 gap-4 bg-red- ">

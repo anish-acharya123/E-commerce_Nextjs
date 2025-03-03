@@ -1,4 +1,4 @@
-import { Nav, NavLink } from "@/components/smallcomponents/Nav";
+import { Nav, NavLink } from "@/components/sections/Nav";
 
 export default function adminLayout({
   children,

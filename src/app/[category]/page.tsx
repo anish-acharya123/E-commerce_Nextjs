@@ -1,10 +1,8 @@
 import Wrapper from "@/components/layouts/Wrapper";
 import foodData from "@/app/_data/foods.json";
-import EachItem from "@/components/smallcomponents/EachItem";
+import EachItem from "@/components/sections/EachItem";
 import Link from "next/link";
-import Filter, {
-  FilterByDropDown,
-} from "@/components/smallcomponents/Filtering";
+import Filter, { FilterByDropDown } from "@/components/sections/Filtering";
 import { notFound } from "next/navigation";
 
 export default async function Category({

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Wrapper from "./layouts/Wrapper";
-import EachItem from "./smallcomponents/EachItem";
+import EachItem from "./sections/EachItem";
 import foodData from "@/app/_data/foods.json";
-import Title from "./smallcomponents/Title";
+import Title from "./sections/Title";
 
 export default function OurFood() {
   return (

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Wrapper from "./layouts/Wrapper";
 import foodData from "@/app/_data/foods.json";
-import EachItem from "./smallcomponents/EachItem";
-import Title from "./smallcomponents/Title";
+import EachItem from "./sections/EachItem";
+import Title from "./sections/Title";
 
 export default function Todays() {
   return (

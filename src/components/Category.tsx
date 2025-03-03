@@ -3,15 +3,17 @@ import GridComponent from "./layouts/ReusedComponent";
 import Wrapper from "./layouts/Wrapper";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
-import Title from "./smallcomponents/Title";
+import Title from "./sections/Title";
 
 export default function Category() {
   return (
     <div>
       <Wrapper>
-      <Title text="Category" />
+        <Title text="Category" />
 
-        <h2 className="md:text-3xl text-2xl font-semibold pt-6">Browse By Category</h2>
+        <h2 className="md:text-3xl text-2xl font-semibold pt-6">
+          Browse By Category
+        </h2>
         <GridComponent>
           {CategoryConst.map((item) => (
             <Link

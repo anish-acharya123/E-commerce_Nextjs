@@ -1,10 +1,5 @@
 import Wrapper from "./layouts/Wrapper";
-import {
-  Nav,
-  NavHamburger,
-  NavItems,
-  SearchAndCard,
-} from "./smallcomponents/Nav";
+import { Nav, NavHamburger, NavItems, SearchAndCard } from "./sections/Nav";
 import Link from "next/link";
 
 export default function Navbar() {

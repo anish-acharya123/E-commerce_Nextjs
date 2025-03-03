@@ -41,7 +41,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
         <SwiperSlide key={id} className="relative ">
           <div
             data-aos="fade-up"
-            className="relative z-10 h-full  w-full flex items-center justify-center    bg-secondary"
+            className="relative z-10 h-full  w-full flex items-center justify-center    bg-primary"
           >
             <div className="  w-full ">
               <Wrapper>

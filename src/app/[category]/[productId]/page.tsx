@@ -2,7 +2,7 @@ import Wrapper from "@/components/layouts/Wrapper";
 // import StarRating from "@/components/ui/Startrating";
 import foods from "@/app/_data/foods.json";
 import Image from "next/image";
-import EachProductDetail from "@/components/smallcomponents/EachProductDetail";
+import EachProductDetail from "@/components/sections/EachProductDetail";
 import Todays from "@/components/Today's";
 import { notFound } from "next/navigation";
 

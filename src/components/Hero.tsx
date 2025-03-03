@@ -1,5 +1,5 @@
 import data from "@/app/_data/Slider_data.json";
-import DemoSlider from "./smallcomponents/Carousel";
+import DemoSlider from "./sections/Carousel";
 
 export default function Hero() {
   return (
