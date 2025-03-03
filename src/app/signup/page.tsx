@@ -29,30 +29,27 @@ const Signup = () => {
   };
 
   return (
-    <section className="md:py-14 py-8">
+    <section className="md:py-16 py-8">
       <Wrapper>
         <div className="flex flex-col justify-center md:space-y-10 space-y-4  items-center">
+          <div className="text-left w-full">Home {">>"} Signup</div>
           <div className="text-center mb-4 w-full">
             <h1 className="md:text-5xl text-4xl font-bold  ">
-              Simply <span className="text-secondary">Sign Up </span>
+              Create an <span className="text-secondary">account </span>
             </h1>
           </div>
-          <div className=" border-2 border-gray-300 rounded-md flex justify-center  items-center   overflow-hidden gap-10 w-full">
+          <div className="  rounded-md flex justify-center  items-center   overflow-hidden gap-10 w-full">
             <section className="md:flex-1 hidden md:block    ">
               <Image
                 src={assets.signup.src}
                 alt={assets.signup.alt}
                 width={1000}
                 height={1000}
-                className="lg:h-[40rem] h-[35rem] w-full"
+                className="lg:h-[35rem] h-[35rem] w-full"
               />
             </section>
-            <section className="flex-1  lg:py-0 md:py-6 py-10 space-y-3 pr-8 px-6 md:px-0 ">
-              <form
-                action=""
-                onSubmit={handleSubmit(onSubmit)}
-                className="text- space-y-6 "
-              >
+            <section className="flex-1  lg:py-0 md:py-6 py-10 space-y-3 pr-8 px-6 md:px-4 ">
+              <form onSubmit={handleSubmit(onSubmit)} className=" space-y-8 ">
                 <div className="space-y-2">
                   <label htmlFor="fullname">Full Name</label> <br />
                   <input
@@ -119,7 +116,7 @@ const Signup = () => {
 
                 <button
                   type="submit"
-                  className="bg-primary w-full hover:bg-secondary px-4 py-2 rounded-md text-white"
+                  className="bg-primary w-full hover:bg-secondary px-4 py-3 rounded-md text-white"
                 >
                   Sign Up
                 </button>
@@ -139,14 +136,14 @@ const Signup = () => {
               <p className=" text-center ">Or</p>
               <div>
                 <div className="flex gap-4 w-full ">
-                  <button className="border-2 rounded-md p-2 w-1/2 space-x-2">
+                  <button className="border-2 border-gray-400 rounded-md p-2 w-1/2 space-x-2">
                     <span className="text-sm md:text-base">SignUp with</span>
                     <Icon
                       icon="flat-color-icons:google"
                       className="text-2xl inline"
                     />
                   </button>
-                  <button className="border-2 rounded-md p-2 w-1/2 space-x-2">
+                  <button className="border-2 border-gray-400 rounded-md p-2 w-1/2 space-x-2">
                     <span className="text-sm md:text-base">SignUp with</span>
                     <Icon icon="logos:facebook" className="text-2xl inline" />
                   </button>
