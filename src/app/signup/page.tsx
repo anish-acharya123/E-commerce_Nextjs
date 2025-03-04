@@ -13,6 +13,8 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import useUserSignup from "@/components/hooks/useUser";
 
+import { signIn } from "next-auth/react";
+
 const Signup = () => {
   const {
     register,
@@ -136,7 +138,10 @@ const Signup = () => {
               <p className=" text-center ">Or</p>
               <div>
                 <div className="flex gap-4 w-full ">
-                  <button className="border-2 border-gray-400 rounded-md p-2 w-1/2 space-x-2">
+                  <button
+                    className="border-2 border-gray-400 rounded-md p-2 w-1/2 space-x-2"
+                    onClick={() => signIn("google")}
+                  >
                     <span className="text-sm md:text-base">SignUp with</span>
                     <Icon
                       icon="flat-color-icons:google"

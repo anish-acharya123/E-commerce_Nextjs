@@ -17,7 +17,7 @@ const useUserSignup = () => {
         error.response?.data?.message || "User signup failed";
       toast.error(errorMessage);
     },
-  });
+  });   
 };
 
 export default useUserSignup;
