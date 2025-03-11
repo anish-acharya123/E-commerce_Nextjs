@@ -1,7 +1,7 @@
 "use client";
 import Wrapper from "@/components/layouts/Wrapper";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { assets } from "../../../public/assets";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -13,9 +13,19 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import useUserSignup from "@/components/hooks/useUser";
 
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Signup = () => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/profile"); // Redirect to profile page if logged in
+    }
+  }, [status, router]);
+
   const {
     register,
     handleSubmit,
@@ -30,6 +40,7 @@ const Signup = () => {
     mutate(data);
   };
 
+  if (status === "loading") return <p>Loading...</p>;
   return (
     <section className="md:py-16 py-8">
       <Wrapper>

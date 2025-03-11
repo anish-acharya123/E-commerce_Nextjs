@@ -10,6 +10,11 @@ const options = {};
 let client;
 let clientPromise;
 
+declare global {
+  // eslint-disable-next-line no-var
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
+}
+
 if (process.env.NODE_ENV === "development") {
   // In development, use a global variable so the connection is cached.
   if (!global._mongoClientPromise) {

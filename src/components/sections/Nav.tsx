@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { NavListConstant } from "@/constants/NavConstant";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { CartContext } from "@/context/Cartcontext";
+import { useSession, signOut } from "next-auth/react";
+import Image from "next/image";
 
 export function Nav({ children }: { children: React.ReactNode }) {
   return (
@@ -42,9 +44,10 @@ export function NavItems() {
 }
 
 export function SearchAndCard() {
+  const { data: session } = useSession();
   const [search, setSearch] = useState("");
-  const {items} = useContext(CartContext)
-  const len = items.length
+  const { items } = useContext(CartContext);
+  const len = items.length;
   return (
     <>
       <div className="py-1 px-3 bg-gray-200 rounded-sm outline-none flex justify-center items-center">
@@ -63,8 +66,35 @@ export function SearchAndCard() {
 
       <Link href={"/cart"} className="relative">
         <Icon icon={"cil:cart"} className="text-3xl" />
-        <p className="absolute top-[-10px] right-[-10px] bg-primary text-sm text-white rounded-full px-2">{len}</p>
+        <p className="absolute top-[-10px] right-[-10px] bg-primary text-sm text-white rounded-full px-2">
+          {len}
+        </p>
       </Link>
+      <div>
+        {session ? (
+          <div className="flex items-center gap-4">
+            <Link href="/profile">
+              <Image
+                width={32}
+                height={32}
+                src={session.user?.image || "/default-avatar.png"}
+                alt="User"
+                className="w-8 h-8 rounded-full"
+              />
+            </Link>
+            <button
+              onClick={() => signOut()}
+              className="px-3 py-1 bg-red-600 rounded"
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          <Link href="/auth/signin" className="px-3 py-1 bg-blue-600 rounded">
+            Login
+          </Link>
+        )}
+      </div>
     </>
   );
 }
