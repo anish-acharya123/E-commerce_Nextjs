@@ -138,7 +138,7 @@ const ProfilePopup = () => {
     <div className="absolute bg-white w-[250px] -translate-x-52 translate-y-7 border-2   left-0 shadow-xl p-4">
       {session && (
         <>
-          <div className="flex items-center gap-4 py-2 bg-gray-200 px-2 rounded-md">
+          <div className="flex items-center gap-4 py-2 bg-gray-200 px-2 rounded-md text-black">
             <Image
               width={32}
               height={32}
