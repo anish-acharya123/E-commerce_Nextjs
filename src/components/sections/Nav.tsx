@@ -1,6 +1,12 @@
 "use client";
 import Link from "next/link";
-import React, { ComponentProps, useContext, useState } from "react";
+import React, {
+  ComponentProps,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { usePathname } from "next/navigation";
 import { NavListConstant } from "@/constants/NavConstant";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -46,8 +52,28 @@ export function NavItems() {
 export function SearchAndCard() {
   const { data: session } = useSession();
   const [search, setSearch] = useState("");
+
+  const [open, setOpen] = useState<boolean>(false);
+
   const { items } = useContext(CartContext);
   const len = items.length;
+
+  const divRef = useRef<HTMLDivElement | null>(null); // Reference for the div
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (divRef.current && !divRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <div className="py-1 px-3 bg-gray-200 rounded-sm outline-none flex justify-center items-center ">
@@ -70,10 +96,13 @@ export function SearchAndCard() {
           {len}
         </p>
       </Link>
-      <div>
+      <div className="relative">
         {session ? (
-          <div className="flex items-center gap-4">
-            <Link href="/profile">
+          <div className="flex items-center gap-4" ref={divRef}>
+            <button
+              onClick={() => setOpen(!open)}
+              className="p-1 bg-white rounded-full border-2 border-black "
+            >
               <Image
                 width={32}
                 height={32}
@@ -81,12 +110,6 @@ export function SearchAndCard() {
                 alt="User"
                 className="w-8 h-8 rounded-full"
               />
-            </Link>
-            <button
-              onClick={() => signOut()}
-              className="px-3 py-1 bg-red-600 rounded"
-            >
-              Logout
             </button>
           </div>
         ) : (
@@ -102,6 +125,8 @@ export function SearchAndCard() {
             </Link>
           </div>
         )}
+
+        {open && <ProfilePopup />}
       </div>
     </>
   );
@@ -110,10 +135,10 @@ export function SearchAndCard() {
 const ProfilePopup = () => {
   const { data: session } = useSession();
   return (
-    <div className="fixed top-0 right-0 bg-white w-[300px] h-screen shadow-lg p-4">
+    <div className="absolute bg-white w-[250px] -translate-x-52 translate-y-7 border-2   left-0 shadow-xl p-4">
       {session && (
         <>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 py-2 bg-gray-200 px-2 rounded-md">
             <Image
               width={32}
               height={32}
@@ -121,13 +146,27 @@ const ProfilePopup = () => {
               alt="User"
               className="w-8 h-8 rounded-full"
             />
-            <p>{session.user?.name}</p>
+            <p className="text-primary">{session.user?.name}</p>
           </div>
-          <div className="flex flex-col gap-4">
-            <Link href="/profile">Profile</Link>
-            <Link href="/wishlist">Wishlist</Link>
-            <Link href="/orders">Orders</Link>
-            <button onClick={() => signOut()}>Logout</button>
+          <div className="flex flex-col gap-4 pt-2 group">
+            <Link
+              href="/profile"
+              className="border-b group-hover:bg-primary grotext-white"
+            >
+              Profile
+            </Link>
+            <Link href="/wishlist" className="border-b">
+              Wishlist
+            </Link>
+            <Link href="/orders" className="border-b">
+              Orders
+            </Link>
+            <button
+              onClick={() => signOut()}
+              className="mt-4 px-4 py-2 bg-red-600 rounded-md text-white"
+            >
+              Logout
+            </button>
           </div>
         </>
       )}
