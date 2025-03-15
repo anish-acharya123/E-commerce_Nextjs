@@ -1,22 +1,20 @@
-"use client";
-
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import AOSInitializer from "@/components/sections/AOSInitializer";
 import Footer from "@/components/Footer";
-import { CartProvider } from "@/context/Cartcontext";
+import { ClientProviders } from "@/context/ClientProvider";
 import Provider from "@/components/Provider/Provider";
 import { Toaster } from "react-hot-toast";
-import { SessionProvider } from "next-auth/react";
+import { SessionProviderWrapper } from "@/components/sections/SessionProviderWrapper";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-serif" });
 
-// export const metadata: Metadata = {
-//   title: "FoodZone",
-//   description: "Find Your Favourite Food Here.",
-// };
+export const metadata: Metadata = {
+  title: "FoodZone",
+  description: "Find Your Favourite Food Here.",
+};
 
 export default function RootLayout({
   children,
@@ -24,11 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SessionProvider>
-      <html lang="en">
-        <body className={`${inter.className} antialiased `}>
-          <CartProvider>
-            <div className=" mx-auto min-h-screen flex flex-col scroll-smooth">
+    <html lang="en" className={outfit.className}>
+      <body className="antialiased">
+        <SessionProviderWrapper>
+          <ClientProviders>
+            <div className="mx-auto min-h-screen flex flex-col scroll-smooth">
               <Navbar />
               <main className="flex-1">
                 <Provider>
@@ -39,9 +37,9 @@ export default function RootLayout({
               </main>
               <Footer />
             </div>
-          </CartProvider>
-        </body>
-      </html>
-    </SessionProvider>
+          </ClientProviders>
+        </SessionProviderWrapper>
+      </body>
+    </html>
   );
 }

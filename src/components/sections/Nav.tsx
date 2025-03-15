@@ -50,7 +50,7 @@ export function SearchAndCard() {
   const len = items.length;
   return (
     <>
-      <div className="py-1 px-3 bg-gray-200 rounded-sm outline-none flex justify-center items-center">
+      <div className="py-1 px-3 bg-gray-200 rounded-sm outline-none flex justify-center items-center ">
         <input
           type="text"
           onChange={(e) => setSearch(e.target.value)}
@@ -90,14 +90,50 @@ export function SearchAndCard() {
             </button>
           </div>
         ) : (
-          <Link href="/auth/signin" className="px-3 py-1 bg-blue-600 rounded">
-            Login
-          </Link>
+          <div className="flex items-center gap-4 ">
+            {/* <Link href="/profile">
+              <Icon icon="iconamoon:profile" className="text-4xl" />
+            </Link> */}
+            <Link
+              href="/login"
+              className="px-3 py-1 bg-primary hover:bg-secondary text-white rounded"
+            >
+              <Icon icon="material-symbols-light:login" className="text-4xl" />
+            </Link>
+          </div>
         )}
       </div>
     </>
   );
 }
+
+const ProfilePopup = () => {
+  const { data: session } = useSession();
+  return (
+    <div className="fixed top-0 right-0 bg-white w-[300px] h-screen shadow-lg p-4">
+      {session && (
+        <>
+          <div className="flex items-center gap-4">
+            <Image
+              width={32}
+              height={32}
+              src={session.user?.image || "/default-avatar.png"}
+              alt="User"
+              className="w-8 h-8 rounded-full"
+            />
+            <p>{session.user?.name}</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Link href="/profile">Profile</Link>
+            <Link href="/wishlist">Wishlist</Link>
+            <Link href="/orders">Orders</Link>
+            <button onClick={() => signOut()}>Logout</button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 // for mobile
 export function NavHamburger() {

@@ -17,7 +17,7 @@ export default function Navbar() {
           <section className=" flex-1  lg:space-x-14 space-x-6 lg:block hidden">
             <NavItems />
           </section>
-          <section className="   lg:space-x-6 space-x-4 text-base lg:text-lg  lg:flex hidden  ">
+          <section className="   lg:space-x-6 space-x-4 text-base lg:text-lg  lg:flex hidden  lg:justify-center lg:items-center ">
             <SearchAndCard />
           </section>
 
