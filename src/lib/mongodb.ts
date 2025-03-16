@@ -7,7 +7,7 @@ if (!Mongodb_url) {
   );
 }
 
-let cached = (global as any).mongoose || { conn: null, promise: null };
+let cached = (globalThis as any).mongoose || { conn: null, promise: null };
 
 export async function connectToDatabase() {
   if (cached.conn) {
@@ -16,12 +16,14 @@ export async function connectToDatabase() {
 
   if (!cached.promise) {
     cached.promise = mongoose
-      .connect(Mongodb_url, {
-        dbName: "ecommerce",
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      } as any)
-      .then((mongoose) => mongoose);
+      .connect(Mongodb_url)
+      .then((mongoose) => mongoose)
+      .catch((error) => {
+        console.error("MongoDB connection error:", error);
+        throw new Error(
+          "MongoDB connection failed. Please check if MongoDB is running."
+        );
+      });
   }
 
   cached.conn = await cached.promise;

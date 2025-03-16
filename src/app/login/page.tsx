@@ -1,20 +1,15 @@
 "use client";
 import Wrapper from "@/components/layouts/Wrapper";
-import Image from "next/image";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { assets } from "../../../public/assets";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  UserSignupSchema,
-  UserSignupSchemaType,
-} from "@/schema/UserForm.schema";
+import { UserLoginSchema, UserLoginSchemaType } from "@/schema/UserForm.schema";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
-import useUserSignup from "@/components/hooks/useUser";
 
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { data: session, status } = useSession();
@@ -30,14 +25,24 @@ const Login = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UserSignupSchemaType>({
-    resolver: zodResolver(UserSignupSchema),
+  } = useForm<UserLoginSchemaType>({
+    resolver: zodResolver(UserLoginSchema),
   });
 
-  const { mutate } = useUserSignup();
 
-  const onSubmit = async (data: UserSignupSchemaType) => {
-    mutate(data);
+  const onSubmit = async (data: UserLoginSchemaType) => {
+    const res = await signIn("credentials", {
+      redirect: false,
+      email: data.email,
+      password: data.password,
+    });
+
+    if (res?.error) {
+      toast.error(res.error);
+    } else {
+      toast.success("Logged in successfully!");
+      router.push("/profile");
+    }
   };
 
   if (status === "loading") return <p>Loading...</p>;
@@ -94,7 +99,7 @@ const Login = () => {
                   type="submit"
                   className="bg-primary w-full hover:bg-secondary px-4 py-3 rounded-md text-white"
                 >
-                  Sign Up
+                  Login
                 </button>
               </form>
               <div className="flex gap-10  justify-center">

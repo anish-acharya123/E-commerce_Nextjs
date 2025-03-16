@@ -28,4 +28,12 @@ export const UserSignupSchema = z
     path: ["confirmPassword"],
   });
 
+export const UserLoginSchema = z.object({
+  email: z.string().email({
+    message: "Email is invalid",
+  }),
+  password: z.string(),
+});
+
+export type UserLoginSchemaType = z.infer<typeof UserLoginSchema>;
 export type UserSignupSchemaType = z.infer<typeof UserSignupSchema>;

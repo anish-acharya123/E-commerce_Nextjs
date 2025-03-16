@@ -146,19 +146,25 @@ const ProfilePopup = () => {
               alt="User"
               className="w-8 h-8 rounded-full"
             />
-            <p className="text-primary">{session.user?.name}</p>
+            <p className="text-primary font-medium">{session.user?.name}</p>
           </div>
           <div className="flex flex-col gap-4 pt-2 group">
             <Link
               href="/profile"
-              className="border-b group-hover:bg-primary grotext-white"
+              className="border-b hover:bg-primary hover:text-white px-2 rounded-md py-1"
             >
               Profile
             </Link>
-            <Link href="/wishlist" className="border-b">
+            <Link
+              href="/wishlist"
+              className="border-b hover:bg-primary hover:text-white px-2 rounded-md py-1 "
+            >
               Wishlist
             </Link>
-            <Link href="/orders" className="border-b">
+            <Link
+              href="/orders"
+              className="border-b hover:bg-primary hover:text-white px-2 rounded-md py-1"
+            >
               Orders
             </Link>
             <button

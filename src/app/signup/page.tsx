@@ -11,7 +11,7 @@ import {
 } from "@/schema/UserForm.schema";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
-import useUserSignup from "@/components/hooks/useUser";
+import { useUserSignup } from "@/components/hooks/useUser";
 
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -22,7 +22,7 @@ const Signup = () => {
 
   useEffect(() => {
     if (status === "authenticated") {
-      router.push("/profile"); // Redirect to profile page if logged in
+      router.push("/profile");
     }
   }, [status, router]);
 
