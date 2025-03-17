@@ -7,6 +7,8 @@ if (!Mongodb_url) {
   );
 }
 
+console.log("Mongodb url", Mongodb_url);
+
 let cached = (globalThis as any).mongoose || { conn: null, promise: null };
 
 export async function connectToDatabase() {
