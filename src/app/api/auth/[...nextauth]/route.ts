@@ -53,34 +53,34 @@ const handler = NextAuth({
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET || "",
     }),
   ],
-  // callbacks: {
-  //   async jwt({ token, user, account }) {
-  //     console.log(
-  //       "JWT Callback - Token:",
-  //       token,
-  //       "User:",
-  //       user,
-  //       "Account:",
-  //       account
-  //     );
-  //     if (user) {
-  //       token.id = user.id; // Ensure the correct user ID is set
-  //       token.email = user.email;
-  //       token.name = user.name;
-  //       token.provider = account ? account.provider : "credentials";
-  //     }
-  //     console.log("✅ Token after update:", token);
-  //     return token;
-  //   },
-  //   async session({ session, token }) {
-  //     console.log(session, token, "session value");
-  //     if (session.user) {
-  //       session.user.id = token.id as string;
-  //       session.user.provider = token.provider as string;
-  //     }
-  //     return session;
-  //   },
-  // },
+  callbacks: {
+    async jwt({ token, user, account }) {
+      console.log(
+        "JWT Callback - Token:",
+        token,
+        "User:",
+        user,
+        "Account:",
+        account
+      );
+      if (user) {
+        token.id = user.id || token.sub; // Ensure the correct user ID is set
+        token.email = user.email;
+        token.name = user.name;
+        token.provider = account ? account.provider : "credentials";
+      }
+      console.log("✅ Token after update:", token);
+      return token;
+    },
+    async session({ session, token }) {
+      console.log(session, token, "session value");
+      if (session.user) {
+        session.user.id = (token.id as string) || (token.sub as string);
+        session.user.provider = token.provider as string;
+      }
+      return session;
+    },
+  },
 });
 
 export { handler as GET, handler as POST };

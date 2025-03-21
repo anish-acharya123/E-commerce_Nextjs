@@ -12,6 +12,7 @@ interface CartItem {
   image: string;
 }
 
+
 interface CartState {
   items: CartItem[];
   totalAmount: number;
