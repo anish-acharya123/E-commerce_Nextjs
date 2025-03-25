@@ -54,7 +54,7 @@ const ContactPage = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-lg md:text-xl opacity-90">
-              We&apos;d love to hear from you! Whether you have a question about
+              We{"'"}d love to hear from you! Whether you have a question about
               our delicious food, delivery options, or anything else, our team
               is ready to assist you.
             </p>
@@ -74,7 +74,7 @@ const ContactPage = () => {
                   Thank You!
                 </h3>
                 <p className="text-gray-600">
-                  Your message has been sent successfully. We&apos;ll get back
+                  Your message has been sent successfully. We{"'"};ll get back
                   to you shortly!
                 </p>
               </div>
