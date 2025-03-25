@@ -1,10 +1,10 @@
 import { MongoClient } from "mongodb";
 
-if (!process.env.MONGODB_URI) {
+if (!process.env.MONGODB_URL) {
   throw new Error("Invalid/Missing environment variable: 'MONGODB_URI'");
 }
 
-const uri: string = process.env.MONGODB_URI;
+const uri: string = process.env.MONGODB_URL;
 const options = {};
 
 let client: MongoClient;
