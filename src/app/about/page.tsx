@@ -147,9 +147,9 @@ const AboutUsPage: React.FC = () => {
               grown into a beloved community restaurant.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              We believe in more than just serving food. We're about creating
-              experiences, supporting local agriculture, and bringing people
-              together through exceptional dining.
+              We believe in more than just serving food. We{"'"}re about
+              creating experiences, supporting local agriculture, and bringing
+              people together through exceptional dining.
             </p>
           </div>
           <div className="rounded-lg overflow-hidden shadow-xl">
@@ -212,7 +212,7 @@ const AboutUsPage: React.FC = () => {
                   {member.name}
                 </h3>
                 <p className="text-gray-600 mb-4">{member.role}</p>
-                <p className="text-gray-500 italic mb-4">"{member.bio}"</p>
+                <p className="text-gray-500 italic mb-4">{member.bio}</p>
                 <div className="flex justify-center space-x-4">
                   {member.socialLinks?.linkedin && (
                     <a
