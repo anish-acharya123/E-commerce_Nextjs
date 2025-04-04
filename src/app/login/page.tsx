@@ -1,4 +1,5 @@
 "use client";
+
 import Wrapper from "@/components/layouts/Wrapper";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
@@ -24,15 +25,14 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },  
+    formState: { errors },
   } = useForm<UserLoginSchemaType>({
     resolver: zodResolver(UserLoginSchema),
   });
 
-
   const onSubmit = async (data: UserLoginSchemaType) => {
     const res = await signIn("credentials", {
-      redirect: false,
+      redirect: true,
       email: data.email,
       password: data.password,
     });
