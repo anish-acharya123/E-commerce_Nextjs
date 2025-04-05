@@ -26,7 +26,6 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     setSubmitted(true);
 
     // Reset form after 3 seconds

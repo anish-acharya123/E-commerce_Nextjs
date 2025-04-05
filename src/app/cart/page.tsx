@@ -8,7 +8,6 @@ import { useContext } from "react";
 export default function Cart() {
   const { addItem, items, removeItem, totalAmount } = useContext(CartContext);
 
-  //   console.log(items);
   const subtotal = items.reduce(
     (total, item) => total + item.price * item.quantity,
     0

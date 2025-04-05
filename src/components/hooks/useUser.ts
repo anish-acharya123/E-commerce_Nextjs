@@ -12,7 +12,6 @@ export const useUserSignup = () => {
       toast.success("User signed up successfully");
     },
     onError: (error: any) => {
-      console.log(error);
       const errorMessage =
         error.response?.data?.message || "User signup failed";
       toast.error(errorMessage);

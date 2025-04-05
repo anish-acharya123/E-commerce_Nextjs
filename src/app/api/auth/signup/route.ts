@@ -17,7 +17,6 @@ export async function POST(req: Request) {
     }
 
     const existingUser = await User.findOne({ email });
-    console.log(name, email, password, existingUser);
 
     if (existingUser) {
       return NextResponse.json(
@@ -27,7 +26,6 @@ export async function POST(req: Request) {
     }
 
     const hashedPassword = await bcrypt.hash(password, 12);
-    console.log(hashedPassword);
     await User.create({
       name,
       email,

@@ -19,7 +19,6 @@ export function verifyToken(token: string) {
   try {
     return jwt.verify(token, JWT_SECRET);
   } catch (error: unknown) {
-    console.log(error);
     throw new Error("Invalid or expired token");
   }
 }

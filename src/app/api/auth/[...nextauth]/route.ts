@@ -52,7 +52,6 @@ const authOptions: NextAuthOptions = {
           name: user.name,
         };
 
-        console.log(userObj);
 
         return userObj;
       },
